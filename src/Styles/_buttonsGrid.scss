@@ -1,0 +1,52 @@
+
+.buttons-grid {
+  display: grid;
+  grid-template-columns: $item-gap-active $item-gap-active $item-gap-active $item-gap-active;
+  gap: $gap;
+  padding: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  &.disabled {
+    gap: $gap-disabled;
+
+    .buttons-grid__item {
+      cursor: default;
+    }
+  }
+
+  &.active {
+    .buttons-grid__item{
+      &:disabled{
+        opacity: 0.7;
+        cursor: default;
+      }
+    }
+  }
+
+  &__item {
+    border: none;
+    width: $item-size;
+    height: $item-size;
+    background: $color4;
+    animation-duration: 0.5s;
+    cursor:pointer;
+    box-sizing: border-box;
+
+    &.error {
+      background: $color4;
+    }
+
+    &.successful {
+      background: $color3;
+    }
+
+    &.right {
+      animation: blink__successful 0.5s;
+    }
+    &.incorrect {
+      animation: blink__error 0.5s;
+    }
+  }
+}

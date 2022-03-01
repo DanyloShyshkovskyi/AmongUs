@@ -1,0 +1,9 @@
+@keyframes blink__default {
+  to {background: $color2;}
+}
+@keyframes blink__successful {
+  to {background: $color3}
+}
+@keyframes blink__error {
+  to {background: $color5}
+}

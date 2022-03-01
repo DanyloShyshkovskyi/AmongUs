@@ -1,0 +1,22 @@
+.steps {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 20px;
+
+  &__item {
+    width: 1em;
+    height: 1em;
+    background: gray;
+    border-radius: 50%;
+
+    &.green {
+      background: $color3;
+    }
+
+    &.error--animated {
+      animation: blink__error 0.5s 2 ;
+    }
+  }
+}
